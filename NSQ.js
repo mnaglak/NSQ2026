@@ -16,4 +16,5 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'});
 Esri_WorldImagery.addTo(map);
 
-var gridImported = L.geoJSON(grid).addTo(map);
+var gridImported = L.geoJSON(json_NQP2026_SurveyGridportara_survey_grid_1)
+gridImported.addTo(map)
