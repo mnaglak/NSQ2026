@@ -3,7 +3,7 @@
 
 //Define map start up options
 var mapOptions = {
- center: [37.110, 25.3715], //set center Lat/Long of your area of interest
+ center: [37.11, 25.3725], //set center Lat/Long of your area of interest
  zoom: 18, //set initial zoom level
  maxZoom : 28,  //set max zoom level
  }
