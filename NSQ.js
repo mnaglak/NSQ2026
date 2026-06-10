@@ -23,7 +23,7 @@ function popUpGrid(f,l) {
         var out = [];
         var myImage;
         if (f.properties) {
-            out.push("Survey Square: " + f.properties.GridSquare);
+		out.push("Survey Square: " + f.properties['Grid Square']);
 			out.push("Explore this Square")
             l.bindPopup(out.join("<br/>"), { closeOnClick: true });
 
