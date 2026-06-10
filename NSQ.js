@@ -3,10 +3,9 @@
 
 //Define map start up options
 var mapOptions = {
- tap: false,
- center: [37.10556, 25.37], //set center Lat/Long of your area of interest
- zoom: 16, //set initial zoom level
- maxZoom : 20,  //set max zoom level
+ center: [37.110, 25.3715], //set center Lat/Long of your area of interest
+ zoom: 18, //set initial zoom level
+ maxZoom : 28,  //set max zoom level
  }
 
 var map = new L.map('map', mapOptions);
@@ -16,3 +15,5 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
             maxZoom: 20,
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'});
 Esri_WorldImagery.addTo(map);
+
+var gridImported = L.geoJSON(grid).addTo(map);
