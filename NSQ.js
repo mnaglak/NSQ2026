@@ -16,5 +16,18 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'});
 Esri_WorldImagery.addTo(map);
 
-var gridImported = L.geoJSON(json_NQP2026_SurveyGridportara_survey_grid_1)
+var gridImported = L.geoJSON(json_NQP2026_SurveyGridportara_survey_grid_1, {onEachFeature: popUpGrid})
 gridImported.addTo(map)
+
+function popUpGrid(f,l) {
+        var out = [];
+        var myImage;
+        if (f.properties) {
+            out.push('<b><u>' + f.properties.GridSquare + '</u></b>');
+            
+
+            l.bindPopup(out.join("<br/>"), { closeOnClick: true });
+
+
+        }
+    }
